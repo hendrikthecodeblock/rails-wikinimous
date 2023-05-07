@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+puts "Creating Data"
+
+10.times do
+  Article.create(title: Faker::Book.title, description: Faker::Marketing.buzzwords, content: Faker::Quotes::Shakespeare.hamlet_quote)
+end
+
+puts "Data creation completed"

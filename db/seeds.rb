@@ -8,7 +8,7 @@
 puts "Creating Data"
 
 10.times do
-  Article.create(title: Faker::Book.title, description: Faker::Marketing.buzzwords, content: Faker::Quotes::Shakespeare.hamlet_quote)
+  Article.create(title: Faker::Book.title, description: Faker::Lorem.paragraph(sentence_count: 2) , content: Faker::Lorem.paragraph_by_chars)
 end
 
 puts "Data creation completed"

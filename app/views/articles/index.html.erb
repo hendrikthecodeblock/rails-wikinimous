@@ -1,9 +1,6 @@
-<ul></ul>
-<li>Wikinimous</li>
-<li>New Article</li>
-
-
-<% @articles.each do | article | %>
-<p><%= link_to article.title, article_path(article) %></p>
-<p><%= article.description %></p>
-<% end %>
+<div class="d-flex flex-column align-items-center">
+  <% @articles.each do | article | %>
+    <h1><%= link_to article.title, article_path(article) %></h1>
+    <p class="fs-3"><%= article.description %></p>
+  <% end %>
+</div>
